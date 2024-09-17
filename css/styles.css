@@ -1,0 +1,70 @@
+/* Stili personalizzati */
+
+/* Colori Pastello */
+:root {
+    --pastel-yellow: #FFF3A9; /* (255,243,169) */
+    --pastel-orange: #FFC5A7; /* (255,197,167) */
+    --pastel-pink:   #FFB1B1; /* (255,177,177) */
+}
+
+/* Navbar personalizzata */
+.bg-custom-nav {
+    background-color: var(--pastel-yellow);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Sezione Servizi */
+.bg-custom-services {
+    background-color: var(--pastel-orange);
+}
+
+.services h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Sezione Eventi */
+.bg-custom-events {
+    background-color: var(--pastel-pink);
+}
+
+.event-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Leggera trasparenza */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.event-card h4 {
+    margin-bottom: 10px;
+}
+
+/* Bottoni personalizzati */
+.btn-primary {
+    background-color: var(--pastel-pink);
+    border-color: var(--pastel-pink);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #e69a9a; /* Colore leggermente più scuro */
+    border-color: #e69a9a;
+    color: #fff;
+}
+
+/* Footer */
+.bg-custom-footer {
+    background-color: var(--pastel-yellow);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Modale */
+.modal-content {
+    background-color: var(--pastel-orange);
+}
