@@ -1,70 +1,281 @@
-/* Stili personalizzati */
-
-/* Colori Pastello */
-:root {
-    --pastel-yellow: #FFF3A9; /* (255,243,169) */
-    --pastel-orange: #FFC5A7; /* (255,197,167) */
-    --pastel-pink:   #FFB1B1; /* (255,177,177) */
-}
-
-/* Navbar personalizzata */
-.bg-custom-nav {
-    background-color: var(--pastel-yellow);
-}
-
-.navbar-brand {
-    font-weight: bold;
-}
-
-/* Sezione Servizi */
-.bg-custom-services {
-    background-color: var(--pastel-orange);
-}
-
-.services h4 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-/* Sezione Eventi */
-.bg-custom-events {
-    background-color: var(--pastel-pink);
-}
-
-.event-card {
-    background-color: rgba(255, 255, 255, 0.8); /* Leggera trasparenza */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-.event-card h4 {
-    margin-bottom: 10px;
-}
-
-/* Bottoni personalizzati */
-.btn-primary {
-    background-color: var(--pastel-pink);
-    border-color: var(--pastel-pink);
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background-color: #e69a9a; /* Colore leggermente più scuro */
-    border-color: #e69a9a;
-    color: #fff;
-}
-
-/* Footer */
-.bg-custom-footer {
-    background-color: var(--pastel-yellow);
-}
-
-footer p {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  svg{
+    height: 34px;
+  }
+  
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
+    display: flex;
+    animation: slide 15s infinite;
+  }
+  
+  .carousel-item {
+    position: relative;
+    width: calc(100% / 3);
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-item.puffin img {
+    object-position: 0px -150px;
 }
 
-/* Modale */
-.modal-content {
-    background-color: var(--pastel-orange);
-}
+  
+  .carousel-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  @keyframes slide {
+    0%, 25% {
+      transform: translateX(0);
+    }
+    33%, 58% {
+      transform: translateX(-33.33%);
+    }
+    66%, 91% {
+      transform: translateX(-66.66%);
+    }
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .logo a:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .separator{
+    margin: 20px;
+    background-color: rgb(30, 30, 30, 0.2);
+    border-radius: 10px;
+    height: 2px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card-details {
+    padding: 2px 16px;
+  }
+  
+  .options {
+    padding: 40px;
+    background-color: #f1f1f1;
+    display: none;
+    text-align: center;
+  }
+  
+  .options h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .options ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .options li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .open-form {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .open-form:hover {
+    background-color: #45a049;
+  }
+  
+  .form-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .form-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .form-content h2 {
+    margin-top: 0;
+  }
+  
+  input[type=text],
+  input[type=email],
+  textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 24px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
